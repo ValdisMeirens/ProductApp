@@ -1,6 +1,5 @@
 package lv.javaguru.classwork.finalwork.repository;
 
-import lv.javaguru.classwork.finalwork.model.ItemNotFoundException;
 import lv.javaguru.classwork.finalwork.model.Product;
 
 import java.util.*;

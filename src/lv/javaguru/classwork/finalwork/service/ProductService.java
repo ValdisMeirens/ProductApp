@@ -11,15 +11,17 @@ public class ProductService {
 
     private ProductRepository repository;
     private ProductValidator validator;
-
-    public ProductService(ProductRepository repository, ProductValidator validator) {
+    private Product product;
+    //VME
+    public ProductService(ProductRepository repository, ProductValidator validator, Product product) {
         this.repository = repository;
         this.validator = validator;
+        this.product = product;
     }
 
-    public void save(Product product) {
-        validator.validate(product);
-        repository.save(product);
+    public void save() {
+        validator.validate();
+        repository.save(this.product);
     }
 
     public Optional<Product> findById(Long id) {
